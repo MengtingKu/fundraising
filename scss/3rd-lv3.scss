@@ -1,0 +1,130 @@
+@import 'reset';
+@mixin bgi {
+    background-size: cover;
+    background-position: center center;    
+}
+@mixin logo {
+    text-indent: 150%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-size: cover;
+    a{
+        display: block;
+    }
+}
+@mixin mibole {
+    @media (max-width:569px) {
+        @content
+    }
+}
+
+$mainColor: gold;
+$fontColor:grey;
+$fontSubColor:black;
+$fontsize-smaller:12px;
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer p{
+    font-size: $fontsize-smaller;
+}
+.logo{
+    background-image: url(https://hexschool.github.io/boootstrap5WebLayout/assets/logo.jpg);
+    @include logo();
+    width: 111px;
+    height: 40px;    
+}
+// .pic-1{
+//     background-image: url(https://hexschool.github.io/boootstrap5WebLayout/assets/produt_image.jpg);
+//     @include bgi();
+//     width: 512px;
+//     height: 352px;
+// }
+.tabHVStyle li a{
+    &:hover,.active{
+    font-weight: 700;
+    border-bottom: 2px solid $mainColor;
+    }
+}
+.navTab{
+    li{
+        @include mibole(){
+            margin: 0;
+        }
+        a{
+            @include mibole(){
+                font-size: 12px;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+.formStyle h3{
+    /*  用<h3>要產生偽元素做旁邊2條裝飾線，所以一定要對<h3>寫下面這兩行  */
+    position: relative;
+    &::before,&::after{
+        /* 直接用 <h3> 的偽元素來做出橫線 */
+        content: "";
+        position: absolute;
+        height: 2.5px;
+        background-color: #FFDF65;
+        width: 43%;
+        @include mibole(){
+            width: 35%;
+        }
+        top:50%;
+    }
+    /* 分別調整 :before 和 :after 的位置 */
+    &::before{
+        left:0
+    }
+    &::after{
+        right: 0;
+    }
+}
+.lineStyle p{
+    /*  用<p>要產生偽元素做旁邊2條裝飾線，所以一定要對<p>寫下面這兩行  */
+    position: relative;
+    &::before,&::after{
+        /* 直接用 <p> 的偽元素來做出橫線 */
+        content: "";
+        position: absolute;
+        height: .6px;
+        background-color: $fontColor;
+        width: 25%;
+        top:50%;
+    }
+    /* 分別調整 :before 和 :after 的位置 */
+    &::before{
+        left:0
+    }
+    &::after{
+        right: 0;
+    }
+}
+.linkStyle{
+    a{
+        display: block;
+        width: 27px;
+        height: 27px;
+        i{
+            font-size: 14px;
+        }
+    }
+}
+.active1{
+    box-shadow: 0.4px .6px 6px rgb(198, 196, 196),-.6px 0.4px 6px rgb(205, 203, 203);
+}
+.btn-warning-hover,.btn-warning{
+        &:hover{
+            background-color: #ff785e;
+            border-color: #ff785e;
+            color: #fff;
+        }
+    }

@@ -1,0 +1,161 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+.logo {
+  background-image: url(https://hexschool.github.io/boootstrap5WebLayout/assets/logo.jpg);
+  text-indent: 150%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-size: cover;
+  width: 111px;
+  height: 40px;
+}
+.logo a {
+  display: block;
+}
+
+.tabHVStyle li a:hover, .tabHVStyle li a .active {
+  font-weight: 700;
+  border-bottom: 2px solid gold;
+}
+
+@media (max-width: 569px) {
+  .navTab li {
+    margin: 0;
+  }
+}
+@media (max-width: 569px) {
+  .navTab li a {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.formStyle h3 {
+  /*  用<h3>要產生偽元素做旁邊2條裝飾線，所以一定要對<h3>寫下面這兩行  */
+  position: relative;
+  /* 分別調整 :before 和 :after 的位置 */
+}
+.formStyle h3::before, .formStyle h3::after {
+  /* 直接用 <h3> 的偽元素來做出橫線 */
+  content: "";
+  position: absolute;
+  height: 2.5px;
+  background-color: #FFDF65;
+  width: 43%;
+  top: 50%;
+}
+@media (max-width: 569px) {
+  .formStyle h3::before, .formStyle h3::after {
+    width: 35%;
+  }
+}
+.formStyle h3::before {
+  left: 0;
+}
+.formStyle h3::after {
+  right: 0;
+}
+
+.lineStyle p {
+  /*  用<p>要產生偽元素做旁邊2條裝飾線，所以一定要對<p>寫下面這兩行  */
+  position: relative;
+  /* 分別調整 :before 和 :after 的位置 */
+}
+.lineStyle p::before, .lineStyle p::after {
+  /* 直接用 <p> 的偽元素來做出橫線 */
+  content: "";
+  position: absolute;
+  height: 0.6px;
+  background-color: grey;
+  width: 25%;
+  top: 50%;
+}
+.lineStyle p::before {
+  left: 0;
+}
+.lineStyle p::after {
+  right: 0;
+}
+
+.linkStyle a {
+  display: block;
+  width: 27px;
+  height: 27px;
+}
+.linkStyle a i {
+  font-size: 14px;
+}
+
+.active1 {
+  -webkit-box-shadow: 0.4px 0.6px 6px rgb(198, 196, 196), -0.6px 0.4px 6px rgb(205, 203, 203);
+          box-shadow: 0.4px 0.6px 6px rgb(198, 196, 196), -0.6px 0.4px 6px rgb(205, 203, 203);
+}
+
+.btn-warning-hover:hover, .btn-warning:hover {
+  background-color: #ff785e;
+  border-color: #ff785e;
+  color: #fff;
+}/*# sourceMappingURL=3rd-lv3.css.map */
